@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EasyShortner.ly 🚀</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 12px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      outline: none;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffdd33;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      word-break: break-all;
+    }
+
+    .info-section {
+      margin-top: 60px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+
+    .info-section h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .info-section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .features {
+      margin-top: 20px;
+      text-align: left;
+      padding-left: 40px;
+    }
+
+    .features li {
+      margin: 10px 0;
+      font-size: 1.05em;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔗 EasyShortner.ly</h1>
+  <div class="container">
+    <form action="/" method="POST">
+      <input type="text" name="url" placeholder="Paste your long link here 🔍" required>
+      <br>
+      <button type="submit">✨ Shorten Now</button>
+    </form>
+    {% if short_url %}
+      <div class="result">
+        🎉 Your short link: <br>
+        <a href="{{ short_url }}" style="color: #ffff66;">{{ short_url }}</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="info-section">
+    <h2>💡 How EasyShortner.ly Works</h2>
+    <p>Paste any long URL and we instantly give you a clean, easy-to-share short link.</p>
+
+    <ul class="features">
+      <li>🚀 Fast & Reliable shortening</li>
+      <li>🔒 100% Safe – no data collected</li>
+      <li>📱 Mobile-friendly design</li>
+      <li>🌍 Works with YouTube, Instagram, TikTok, and more</li>
+    </ul>
+  </div>
+
+  <footer>
+    🚀 Powered by Termux Flask | Made with ❤️ by Lucky Lavish
+  </footer>
+</body>
+</html>
